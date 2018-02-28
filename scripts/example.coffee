@@ -13,6 +13,9 @@ module.exports = (robot) ->
   robot.hear /Meow!/, (res) ->
     res.send "Meow is here!!!"
 
+  robot.hear /Meow can only say meow\?/, (res) ->
+    res.send "Nope meow~"
+
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
