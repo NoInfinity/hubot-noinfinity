@@ -16,9 +16,9 @@ module.exports = (robot) => {
         res.send("w!");
     });
 
-    robot.hear(/233+/, (res) => {
+    /*robot.hear(/233+/, (res) => {
         res.send("哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈！");
-    });
+    });*/
 
     robot.hear(/ojbk/i, (res) => {
         res.send("O什么K？");
