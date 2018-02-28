@@ -15,8 +15,7 @@ module.exports = (robot) ->
 
   robot.hear /Meow can only say meow\?/, (res) ->
     res.send "Nope meow~"
-    setTimeout -> 
-      res.send "Scare you!!Meow!!"
+    setTimeout -> res.send("Scare you!!Meow!!")
     , 5000
 
   # robot.hear /badger/i, (res) ->
