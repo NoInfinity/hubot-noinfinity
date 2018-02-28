@@ -9,6 +9,10 @@ module.exports = (robot) => {
     });
 
     robot.hear(/Meow say (.*)/i, (res) => {
+        if(/(leaferx|leafer|叶者)/i.test(res.match[1])) {
+            res.reply("qwqqq");
+            return;
+        }
         res.reply(res.match[1] + "!");
     });
 
