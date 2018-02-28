@@ -10,6 +10,12 @@
 
 module.exports = (robot) ->
 
+  robot.hear /Meow!/, (res) ->
+    res.send "Meow is here!!!"
+
+  robot.router.get "/", (res) ->
+    res.send "ok"
+
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
