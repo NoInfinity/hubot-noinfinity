@@ -23,4 +23,8 @@ module.exports = (robot) => {
     robot.hear(/ojbk/i, (res) => {
         res.send("O什么K？");
     });
+
+    robot.hear(/i love meow/i, (res) => {
+        res.reply("Meow love u too!!!!");
+    })
 }
