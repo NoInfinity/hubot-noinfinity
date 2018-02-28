@@ -19,7 +19,10 @@
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1"
   },
+  "scripts": {
+    "start": "EXPRESS_PORT=${LEANCLOUD_APP_PORT} sh bin/hubot -a bearychat"
+  },
   "engines": {
-    "node": "0.10.x"
+    "node": "6.x"
   }
 }
