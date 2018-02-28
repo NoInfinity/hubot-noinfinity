@@ -13,6 +13,10 @@ module.exports = (robot) => {
             res.reply("qwqqq");
             return;
         }
+        if (Math.random() < 0.1) {
+            res.reply("自己的话自己说！Meow生气了哼！");
+            return;
+        }
         res.reply(res.match[1] + "!");
     });
 
