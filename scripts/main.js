@@ -9,7 +9,7 @@ module.exports = (robot) => {
     });
 
     robot.hear(/Meow say (.*)/i, (res) => {
-        if(/(leaferx|leafer|叶者)/i.test(res.match[1])) {
+        if (/(leaferx|leafer|叶者)/i.test(res.match[1])) {
             res.reply("qwqqq");
             return;
         }
@@ -30,5 +30,30 @@ module.exports = (robot) => {
 
     robot.hear(/i love meow/i, (res) => {
         res.reply("Meow love u too!!!!");
-    })
+    });
+
+    var dissdavyInterval = null;
+
+    robot.hear(/meow what do you think of davy\?/i, (res) => {
+        res.send("Davy sucks!!!");
+        if (dissdavyInterval) {
+            res.send("Davy sucks!!!");
+            return;
+        }
+        dissdavyInterval = setInterval(() => { res.send("Davy sucks!!!"); }, 1000);
+    });
+
+    robot.hear(/meow stop dissdavy/i, (res) => {
+        if (dissdavyInterval) {
+            clearInterval(dissdavyInterval);
+            res.send("Davy sucks!!!");
+            res.send("Davy sucks!!!");
+            res.send("Davy sucks!!!");
+            res.send("Davy sucks!!!");
+            dissdavyInterval = null;
+        }
+        else {
+            res.send("Allright. Davy sucks.");
+        }
+    });
 }
