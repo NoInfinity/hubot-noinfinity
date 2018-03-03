@@ -1,4 +1,4 @@
-export default (robot) => {
+module.exports = (robot) => {
   robot.hear(/Meow!/, (res) => {
     res.send('Meow is here!!!');
   });
