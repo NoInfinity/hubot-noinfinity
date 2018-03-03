@@ -7,4 +7,5 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 - echo -e "Host 120.79.78.132\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
+- ssh root@120.79.78.132 'ps -ef | grep node | cut -c 9-15 | xargs kill -9'
 - ssh root@120.79.78.132 'cd ~/leafer/meow/ && ./meow.sh'
